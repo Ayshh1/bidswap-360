@@ -32,7 +32,7 @@ export default function CartProduct({cartItem}) {
             border-b border-slate-400  pb-3 font-semibold text-sm mb-4"
           >
             <div className="flex items-center gap-3">
-              <Image
+              <img
                 src={cartItem.image}
                 alt=  {cartItem.name}
                 width={231}

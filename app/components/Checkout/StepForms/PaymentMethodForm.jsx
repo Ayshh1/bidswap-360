@@ -146,7 +146,7 @@ function ShippingDetailsForm() {
 
   return (
     <form onSubmit={handleSubmit(processData)}>
-      <h2 className='text-xl font-semibold mb-4 dark:text-lime-400'>
+      <h2 className='text-xl font-semibold mb-4 dark:text-cyan-500'>
         Payment Method
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
@@ -169,8 +169,8 @@ function ShippingDetailsForm() {
                 htmlFor="jazzcash"
                 className="inline-flex items-center justify-between w-full p-5
                 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer
-                dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600
-                peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:bg-gray-800"
+                dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-cyan-600
+                peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:bg-gray-800"
               >
                 <div className="flex gap-2 items-center">
                   <HeartHandshake className="w-8 h-8 ms-3 flex-shrink-0" />
@@ -193,8 +193,8 @@ function ShippingDetailsForm() {
                 htmlFor="cod"
                 className="inline-flex items-center justify-between w-full p-5
                 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer
-                dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600
-                peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:bg-gray-800"
+                dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-cyan-600
+                peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:bg-gray-800"
               >
                 <div className="flex gap-2 items-center">
                   <HeartHandshake className="w-8 h-8 ms-3 flex-shrink-0" />
@@ -217,8 +217,8 @@ function ShippingDetailsForm() {
                 htmlFor="credit-card"
                 className="inline-flex items-center justify-between w-full p-5
                 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer
-                dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600
-                peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:bg-gray-800"
+                dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-cyan-600
+                peer-checked:text-cyan-600 hover:text-gray-600 hover:bg-gray-100 dark:bg-gray-800"
               >
                 <div className="flex gap-2 items-center ">
                   <CreditCard className="w-8 h-8 ms-3 flex-shrink-0 text-green-400" />
@@ -241,38 +241,50 @@ function ShippingDetailsForm() {
             </li>
           </ul>
 
-          {/* JazzCash Payment Form */}
-          {PaymentMethod === "JazzCash" && (
-            <div className="mt-5">
-              <div className="mb-4">
-                <label className="block text-gray-700 dark:text-white mb-2" htmlFor="accountNumber">JazzCash Account Number</label>
-                <input
-                  type="text"
-                  id="accountNumber"
-                  value={jazzCashDetails.accountNumber}
-                  onChange={(e) => setJazzCashDetails({ ...jazzCashDetails, accountNumber: e.target.value })}
-                  className="w-full p-3 border rounded"
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 dark:text-white mb-2" htmlFor="pin">PIN</label>
-                <input
-                  type="password"
-                  id="pin"
-                  value={jazzCashDetails.pin}
-                  onChange={(e) => setJazzCashDetails({ ...jazzCashDetails, pin: e.target.value })}
-                  className="w-full p-3 border rounded"
-                  required
-                />
-              </div>
-              <button type="button" onClick={payWithJazzCash} className="bg-green-500 h-12 px-5 rounded-md w-25">
-                Pay with JazzCash
-              </button>
-              {paymentStatus && <p className='text-green-500'>{paymentStatus}</p>}
-            </div>
 
-          )}
+ {/* JazzCash Payment Form */}
+{PaymentMethod === "JazzCash" && (
+  <div className="mt-5">
+    <div className="mb-4">
+      <label className="block text-gray-700 dark:text-white mb-2" htmlFor="accountNumber">
+        JazzCash Account Number
+      </label>
+      <input
+        type="text"
+        id="accountNumber"
+        value={jazzCashDetails.accountNumber}
+        onChange={(e) => setJazzCashDetails({ ...jazzCashDetails, accountNumber: e.target.value })}
+        className="w-full p-3 border rounded bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600"
+        required
+      />
+    </div>
+    <div className="mb-4">
+      <label className="block text-gray-700 dark:text-white mb-2" htmlFor="pin">
+        PIN
+      </label>
+      <input
+        type="password"
+        id="pin"
+        value={jazzCashDetails.pin}
+        onChange={(e) => setJazzCashDetails({ ...jazzCashDetails, pin: e.target.value })}
+        className="w-full p-3 border rounded bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600"
+        required
+      />
+    </div>
+    <button
+      type="button"
+      onClick={payWithJazzCash}
+      className="bg-[#F36E21] text-white h-12 px-5 rounded-md w-full hover:bg-[#D55C1C] transition-all"
+    >
+      Pay with JazzCash
+    </button>
+    {paymentStatus && <p className="text-green-500 mt-3">{paymentStatus}</p>}
+  </div>
+)}
+
+
+
+
         </div>
       </div>
       <NavButtons />

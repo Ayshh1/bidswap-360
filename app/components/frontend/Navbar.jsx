@@ -3,7 +3,7 @@ import React from 'react';
 import SearchForm from './SearchForm';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/public/limilogo.png';
+import logo from '@/public/images/logo.png';
 import {  ShoppingCart,  User } from 'lucide-react';
 import ThemeSwicherBtn from './ui/ThemeSwicherBtn';
 import HelpModal from './HelpModal';

@@ -141,7 +141,7 @@ export default function Product({ product }) {
 
           <div className="flex items-center justify-between gap-2 pb-3 dark:text-slate-200 text-slate-800">
             <p>Rs {product.saleprice}</p>
-            <button onClick={handleAddToCart} className="flex items-center space-x-2 bg-lime-600 px-4 py-2 rounded-md text-white">
+            <button onClick={handleAddToCart} className="flex items-center space-x-2 bg-cyan-400 hover:bg-cyan-600 px-4 py-2 rounded-md text-white">
               <BaggageClaim />
               <span>Add</span>
             </button>

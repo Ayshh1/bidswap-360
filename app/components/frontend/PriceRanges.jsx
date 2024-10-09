@@ -33,44 +33,44 @@ const PriceRanges = () => {
     }
 
     return (
-        <div className="col-span-full mt-4 flex flex-col items-center justify-between border rounded-xl">
-            <div className="bg-gray-200 p-2 rounded-t-lg w-full ">
-                <span className="font-semibold text-black">Select the price range</span>
-            </div>
-            <hr className="w-full mb-2 border-gray-300" />
-            <div className="flex justify-between w-full p-2">
-                <input
-                    type="number"
-                    name="min"
-                    placeholder="Min"
-                    value={minPrice}
-                    onChange={(e) => {
-                        const value = Math.max(0, parseInt(e.target.value, 10));
-                        setMinPrice(value.toString());
-                    }}
-                    className="w-24 px-2 py-1 text-black rounded"
-                />
-                <input
-                    type="number"
-                    name="max"
-                    placeholder="Max"
-                    value={maxPrice}
-                    onChange={(e) => {
-                        const value = Math.max(0, parseInt(e.target.value, 10));
-                        setMaxPrice(value.toString());
-                    }}
-                    className="w-24 px-2 py-1 text-black rounded"
-                />
-            </div>
-            <div className='flex w-full gap-2 px-2'>
-                <button onClick={handlePriceSubmit} className="mt-4 bg-blue-500 w-[96%] hover:bg-blue-700 text-white font-bold py-2 my-2 px-4 rounded">
-                    Filter
-                </button>
-                <button onClick={handleClearFilter} className="mt-4 bg-blue-500 w-[96%] hover:bg-blue-700 text-white font-bold py-2 my-2 px-4 rounded">
-                    clear filter
-                </button>
-            </div>
+        <div className="col-span-full mt-4 flex flex-col items-center justify-between rounded-xl shadow-lg bg-white dark:bg-gray-800">
+        <div className="bg-cyan-500 p-4 rounded-t-lg w-full text-center">
+            <span className="font-semibold justify justify-start text-white dark:text-white">Select the Price Range</span>
         </div>
+        <hr className="w-full mb-2 border-gray-300" />
+        <div className="flex justify-between w-full p-4">
+            <input
+                type="number"
+                name="min"
+                placeholder="Min"
+                value={minPrice}
+                onChange={(e) => {
+                    const value = Math.max(0, parseInt(e.target.value, 10));
+                    setMinPrice(value.toString());
+                }}
+                className="w-24 px-3 py-2 text-black bg-gray-200 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-blue-400"
+            />
+            <input
+                type="number"
+                name="max"
+                placeholder="Max"
+                value={maxPrice}
+                onChange={(e) => {
+                    const value = Math.max(0, parseInt(e.target.value, 10));
+                    setMaxPrice(value.toString());
+                }}
+                className="w-24 px-3 py-2 text-black bg-gray-200 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-blue-400"
+            />
+        </div>
+        <div className='flex w-full gap-2 px-4 mb-4'>
+            <button onClick={handlePriceSubmit} className="mt-4 bg-cyan-500 hover:bg-cyan-700 transition duration-200 text-white font-bold py-2 rounded-lg shadow-md w-full">
+                Filter
+            </button>
+            <button onClick={handleClearFilter} className="mt-4 bg-red-600 hover:bg-red-700 transition duration-200 text-white font-bold py-2 rounded-lg shadow-md w-full">
+                Clear Filter
+            </button>
+        </div>
+    </div>
     )
 }
 

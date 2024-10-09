@@ -36,7 +36,7 @@ export default function ShippingDetailsForm() {
 
   return (
     <form onSubmit={handleSubmit(processData)}>
-      <h2 className='text-xl font-semibold mb-4 dark:text-lime-400'>Shipping Details</h2>
+      <h2 className='text-xl font-semibold mb-4 dark:text-cyan-500'>Shipping Details</h2>
       <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
         <TextInput
           label="Street Address"
@@ -67,7 +67,7 @@ export default function ShippingDetailsForm() {
           className='w-full'
         />
         <div className="col-span-full">
-          <h3 className="mb-7 text-lg font-medium text-gray-900 dark:text-lime-400">
+          <h3 className="mb-7 text-lg font-medium text-gray-900 dark:text-cyan-500">
             Shipping Cost?
           </h3>
           <ul className="grid w-full gap-6 md:grid-cols-2">
@@ -85,8 +85,8 @@ export default function ShippingDetailsForm() {
                 <div className="flex gap-2 items-center">
                   <Truck className="w-8 h-8 ms-3 flex-shrink-0" />
                   <div>
-                    <p>UPS</p>
-                    <p>Delivery Cost: $8</p>
+                    <p>Over Night Delivery</p>
+                    <p>Delivery Cost: 20</p>
                   </div>
                   <Circle className="w-5 h-5 ms-3" />
                 </div>
@@ -106,8 +106,8 @@ export default function ShippingDetailsForm() {
                 <div className="flex gap-2 items-center">
                   <Truck className="w-8 h-8 ms-3 flex-shrink-0" />
                   <div>
-                    <p>UPS</p>
-                    <p>Delivery Cost: $20</p>
+                    <p>Standard</p>
+                    <p>Delivery Cost: 10</p>
                   </div>
                   <Circle className="w-5 h-5 ms-3" />
                 </div>

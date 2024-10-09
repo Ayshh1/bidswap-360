@@ -31,7 +31,7 @@ export default function ImageInput({
         )}
       </div>
       {imageUrl ? (
-        <Image
+        <img
           src={imageUrl}
           alt="Item image"
           width={1000}

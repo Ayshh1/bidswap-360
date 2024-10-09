@@ -22,8 +22,8 @@ export default function CheckoutPage() {
   }, [])
   
   return (
-    <div className="bg-slate-200 dark:bg-slate-950 min-h-screen">
-      <div className="max-w-3xl my-6 mx-auto border border-lime-500 p-6">
+    <div className="min-h-screen">
+      <div className="max-w-3xl mt-20 mx-auto border border-gray-200 dark:border-gray-800 rounded-xl p-6">
         {/* Steps */}
         <Steps steps={steps} currentStep={currentStep} />
 

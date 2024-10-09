@@ -9,14 +9,14 @@ export default function CartBanner() {
     return acc + (currentItem.saleprice * currentItem.qty);
   }, 0) ?? 0;
   return (
-    <div className="bg-gray-100 rounded-xl mb-6">
+    <div className="bg-gray-100 dark:bg-gray-700 rounded-xl mb-6 ">
                 <div className="p-4">
                   <div className="sm:flex sm:items-center sm:justify-between">
                     <div className="flex items-center flex-1">
                       <div className="inline-flex items-center justify-center flex-shrink-0 bg-gray-400 rounded-full w-9 h-9 text-gray-50">
                         <ShoppingBag className="w-6 h-6" />
                       </div>
-                      <p className="ml-3 text-base font-normal text-gray-900">
+                      <p className="ml-3 text-base font-normal text-gray-900 dark:text-white">
                         You have {cartItems.length} items in cart. Sub total is{" "}
                         <span className="font-bold">${subTotal}</span>
                       </p>

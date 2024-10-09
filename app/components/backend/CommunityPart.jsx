@@ -8,11 +8,12 @@ import { UploadButton } from "../../../lib/uploadThing";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { makePostRequest } from "@/lib/apiRequest";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import QuillEditor from "../formInputs/QuillEditor";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
+// import QuillEditor from "../formInputs/QuillEditor";
 import { storage } from "../../firebaseConfig";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function CommunityPart({ heading, href, linktitle }) {
@@ -255,7 +256,7 @@ export default function CommunityPart({ heading, href, linktitle }) {
                 >
                   Blog Content
                 </label>
-                <ReactQuill
+                {/* <QuillEditor
                 
                   className=" text-gray-900"
                   theme="snow"
@@ -263,7 +264,7 @@ export default function CommunityPart({ heading, href, linktitle }) {
                   onChange={setContent}
                   modules={modules}
                   formats={formats}
-                />
+                /> */}
               </div>
                       </div>
                     </div>

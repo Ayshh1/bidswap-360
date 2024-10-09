@@ -1,5 +1,6 @@
 "use client"; 
 import SalesInvoice from "@/app/components/order/salesInvoice";
+import Loading from "@/app/loading";
 import { getData } from "@/lib/getData";
 import React, { useEffect, useState } from "react";
 
@@ -26,7 +27,7 @@ export default function Page({ params }) {
     }, [id]); // Only call useEffect when 'id' changes
 
     // Display loading message while fetching data
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <Loading/>;
 
     // Display error if it occurs
     if (error) return <div>{error}</div>;

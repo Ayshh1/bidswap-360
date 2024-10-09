@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+
 export default function ResetPasswordForm() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -18,13 +19,12 @@ export default function ResetPasswordForm() {
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(data) {
-    e.preventDefault();
-    
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     const token = searchParams.get("token");
     const id = searchParams.get("id");
     data.token = token;
     data.id = id;
+
     try {
       setLoading(true);
       const response = await fetch(`${baseUrl}/api/users/update-password`, {
@@ -34,27 +34,27 @@ export default function ResetPasswordForm() {
         },
         body: JSON.stringify(data),
       });
+
       if (response.ok) {
-        // await signOut();
         setLoading(false);
         router.push("/login");
         toast.success("Password Updated Successfully");
       } else {
         setLoading(false);
-        toast.error("Something Went wrong");
+        toast.error("Something went wrong");
       }
     } catch (error) {
       setLoading(false);
       console.error("Network Error:", error);
-      toast.error("Its seems something is wrong with your Network");
+      toast.error("It seems something is wrong with your network");
     }
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 " action="#">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" action="#">
       <div>
         <label
-          htmlFor="email"
+          htmlFor="password"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           New Password
@@ -66,10 +66,10 @@ export default function ResetPasswordForm() {
           id="password"
           className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="New Password"
-          required=""
+          required
         />
         {errors.password && (
-          <small className="text-red-600 text-sm ">
+          <small className="text-red-600 text-sm">
             This field is required
           </small>
         )}

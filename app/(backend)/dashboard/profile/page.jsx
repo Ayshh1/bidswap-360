@@ -8,9 +8,9 @@ export default async function page() {
   if(!session)return
   const {user} = session;
   return (
-    <div>
-     <h2>Welcome {user?.name} </h2>
+    <>
+     
      <UpdateUser />
-    </div>
+    </>
   )
 }

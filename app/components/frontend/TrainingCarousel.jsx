@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import slider from "@/public/slider-1.jpg";
 import Link from "next/link";
+import { FaBookOpen } from "react-icons/fa";
 
 export default function TrainingCarousel({trainings}) {
   const responsive = {
@@ -47,38 +48,39 @@ export default function TrainingCarousel({trainings}) {
       >
         {trainings.map((training, i) => {
           return (
-            <div key={i} className="rounded-lg mr-3 dark:bg-slate-900
-            overflow-hidden bg-slate-100">
-              <Link href="/">
-                <Image
-                  src={training.image}
-                  alt={training.name}
-                  width={417}
-                  height={417}
-                  className="w-full h-48 object-cover"
-                />
-              </Link>
-              <h2 className="text-center text-slate-800 my-2 dark:text-slate-200
-              text-xl">
-                {" "}
-                {training.name}
-              </h2>
-              <p className="px-4 line-clamp-3 text-slate-800
-              dark:text-slate-300 mb-2">
-                {training.description}
-              </p>
-              <div className="flex justify-between items-center px-4 py-2">
-              <Link href="/" className='bg-lime-600 text-slate-50
-                rounded-md px-4 py-2 hover:bg-lime-700 duration:300 transition-all'>
-                    Read More
-              </Link>
-              <Link href='/' className="text-slate-800
-              dark:text-slate-100">
-                Talk to the Consultant
-              </Link>
-              </div>
+            <div key={i} className="rounded-lg mr-3 dark:bg-slate-900 overflow-hidden bg-slate-100 shadow-lg transition-transform transform hover:scale-105 duration-300">
+    <Link href="/">
+      <Image
+        src={training.image}
+        alt={training.name}
+        width={417}
+        height={417}
+        className="w-full h-48 object-cover transition-opacity hover:opacity-90 duration-300"
+      />
+    </Link>
+    <h2 className="text-center text-slate-800 my-2 dark:text-slate-200 text-xl font-semibold tracking-wide">
+      {training.name}
+    </h2>
+    <p className="px-4 line-clamp-3 text-slate-800 dark:text-slate-300 mb-4 text-sm leading-relaxed">
+      {training.description}
+    </p>
+    <div className="flex justify-between items-center px-4 py-2 border-t border-gray-200 dark:border-slate-700">
+      <Link
+        href="/"
+        className="text-sm text-blue-600 hover:underline hover:text-blue-800 transition-all duration-300 dark:text-blue-500 dark:hover:text-blue-400"
+      >
+        Talk to Consultant
+      </Link>
 
-            </div>
+      <Link
+        href="/"
+        className="bg-cyan-400 text-slate-50 rounded-md px-4 py-2 hover:bg-cyan-600 transition-all duration-300 flex items-center space-x-2 text-sm"
+      >
+        <FaBookOpen className="w-5 h-5" />
+        <span>Read More</span>
+      </Link>
+    </div>
+  </div>
           );
         })}
       </Carousel>

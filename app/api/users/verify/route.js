@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import db from '@/lib/db';
+import toast from 'react-hot-toast';
 
 export async function GET(request) {
     try {
@@ -27,7 +28,9 @@ export async function GET(request) {
         });
 
         // Redirect to a success page after verification
+        
         return NextResponse.redirect(new URL('/login', request.url));
+        
     } catch (error) {
         console.error('Error verifying email:', error);
         return NextResponse.json({

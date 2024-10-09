@@ -6,6 +6,7 @@ import base64url from 'base64url';
 import nodemailer from 'nodemailer';
 import { EmailTemplate } from '@/app/components/frontend/EmailTemplate';
 import { render } from '@react-email/render';
+import toast from 'react-hot-toast';
 
 // Configure nodemailer to use a real email service
 const transport = nodemailer.createTransport({
@@ -108,6 +109,7 @@ console.log("EMAIL_PASSWORD:", process.env.APP_PASSWORD);
             },
             { status: 201 }
         );
+        
     } catch (error) {
         console.error('Error creating User:', error);
         return NextResponse.json({

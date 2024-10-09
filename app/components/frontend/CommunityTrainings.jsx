@@ -12,9 +12,9 @@ export default async function CommunityTrainings() {
          <div className="bg-slate-100 py-3 px-6 font-semibold border-b  border-gray-300
          dark:bg-slate-800 text-slate-800 dark:text-slate-100 dark:border-gray-600 
          flex justify-between items-center ">
-        < h2>  BidSwap360 Community </h2>
-        <Link href="/" className='bg-lime-600 text-slate-50
-         rounded-md px-4 py-2 hover:bg-lime-700 duration:300 transition-all'>See All
+        <p>  BidSwap360 Community </p>
+        <Link href="/" className='bg-gray-700 text-slate-50
+         rounded-md px-4 py-2 hover:bg-cyan-700 duration:300 transition-all'>See All
          </Link>
          
         </div>

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaUser, FaUserCircle} from "react-icons/fa";
 
 
 export default function RegisterForm({role}) {
@@ -65,6 +66,8 @@ export default function RegisterForm({role}) {
   return (
     
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
+
+
      <div>
         <label
           htmlFor="role"
@@ -72,22 +75,32 @@ export default function RegisterForm({role}) {
         >
           Role
         </label>
+        <div className="flex items-center border border-transparent rounded bg-gray-50 dark:bg-gray-800">
+          <span className="px-3 text-gray-400 ">
+            <FaUserCircle />
+          </span>
         <input
           {...register("role", { required: false })}
           type="text"
           name="role"
           id="role"
-          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+          className="w-full p-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 outline-none border-none focus:ring-0"
           defaultValue={role}
           readOnly
          
         />
+        </div>
         {errors.name && (
           <small className="text-red-600 text-sm ">
             This field is required
           </small>
         )}
       </div>
+
+
+
+
+
       <div>
         <label
           htmlFor="name"
@@ -95,21 +108,28 @@ export default function RegisterForm({role}) {
         >
           Your name
         </label>
+        <div className="flex items-center border border-transparent rounded bg-gray-50 dark:bg-gray-800">
+          <span className="px-3 text-gray-400 ">
+            <FaUser />
+          </span>
         <input
           {...register("name", { required: true })}
           type="text"
           name="name"
           id="name"
-          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
-          placeholder="John Doe"
+          className="w-full p-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 outline-none border-none focus:ring-0"
+          placeholder="                 Your Good Name"
           required=""
         />
+        </div>
         {errors.name && (
           <small className="text-red-600 text-sm ">
             This field is required
           </small>
         )}
       </div>
+
+
       <div>
         <label
           htmlFor="email"
@@ -117,15 +137,20 @@ export default function RegisterForm({role}) {
         >
           Your email
         </label>
+        <div className="flex items-center border border-transparent rounded bg-gray-50 dark:bg-gray-800">
+          <span className="px-3 text-gray-400">
+            <FaEnvelope />
+          </span>
         <input
           {...register("email", { required: true })}
           type="email"
           name="email"
           id="email"
-          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
-          placeholder="name@company.com"
+          className="w-full p-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 outline-none border-none focus:ring-0"
+          placeholder="              youremail @gmail.com"
           required=""
         />
+        </div>
         {errors.email && (
           <small className="text-red-600 text-sm ">
             This field is required
@@ -133,6 +158,8 @@ export default function RegisterForm({role}) {
         )}
         <small className="text-red-600 text-sm ">{emailErr}</small>
       </div>
+
+
       <div>
         <label
           htmlFor="password"
@@ -140,21 +167,28 @@ export default function RegisterForm({role}) {
         >
           Password
         </label>
+        <div className="flex items-center border border-transparent rounded bg-gray-50 dark:bg-gray-800">
+          <span className="px-3 text-gray-400 ">
+            <FaLock />
+          </span>
         <input
           {...register("password", { required: true })}
           type="password"
           name="password"
           id="password"
-          placeholder="••••••••"
-          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
+          placeholder="                           ●●●●"
+          className="w-full p-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 outline-none border-none focus:ring-0"
           required=""
         />
+        </div>
         {errors.password && (
           <small className="text-red-600 text-sm ">
             This field is required
           </small>
         )}
       </div>
+
+
       {loading ? (
         <button
           disabled

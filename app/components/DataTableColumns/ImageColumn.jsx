@@ -6,7 +6,7 @@ export default function ImageColumn({row, accessorKey}) {
 
          return (
            <div className="shrink-0">
-              <Image
+              <img
              src={image}
              width={500}
              height={500}

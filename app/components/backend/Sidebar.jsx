@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/collapsible";
 import { DotFilledIcon } from '@radix-ui/react-icons';
 import { signOut, useSession } from 'next-auth/react';
+import Loading from '@/app/loading';
 
 export default function Sidebar({ showSidebar }) {
   const [open, setOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function Sidebar({ showSidebar }) {
   const pathName = usePathname();
 
   if (status === "loading") {
-    return <p>Loading...</p>;
+    return <Loading/>;
   }
 
   let sideBarLinks = [

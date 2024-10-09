@@ -8,15 +8,22 @@ export default function BreadCrumb() {
 
   return (
     <div>
-    <Breadcrumb className="mb-8" aria-label="Default breadcrumb example">
-      <Breadcrumb.Item href="/" icon={HiHome}>
-        Home
-      </Breadcrumb.Item>
-      <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-      <Breadcrumb.Item>Cart</Breadcrumb.Item>
-    </Breadcrumb>
+      <Breadcrumb className="mb-8" aria-label="Breadcrumb">
+        {/* Home Tab */}
+        <Breadcrumb.Item href="/" icon={HiHome}>
+          Home
+        </Breadcrumb.Item>
 
+        {/* Products Tab */}
+        <Breadcrumb.Item href="#">
+          Products
+        </Breadcrumb.Item>
 
+        {/* Cart Tab - Active with cyan-400 */}
+        <Breadcrumb.Item href="#" style={{ color: '#22d3ee' }}>
+          Cart
+        </Breadcrumb.Item>
+      </Breadcrumb>
     </div>
   )
 }

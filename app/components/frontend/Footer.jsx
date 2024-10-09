@@ -1,24 +1,27 @@
 import Image from "next/image";
-import logo from "@/public/limilogo.png";
+import logo from "@/public/images/logo.png";
 const Footer = () => {
   return (
-    <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
+    <section className="py-10 bg-gray-50 dark:bg-gray-900 sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-            <Image className="w-auto h-9" src={logo} alt="logo" />
+            <Image className="w-20 h-20" src={logo} alt="logo" />
 
-            <p className="text-base leading-relaxed text-gray-600 mt-7">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
+            <p className="text-base leading-relaxed mt-7 text-gray-600 dark:text-gray-300">
+            Bid, Swap, and Experience the Future of Shopping. Unlock Deals, Trade with Ease, and See it All in AR.
             </p>
 
-            <ul className="flex items-center space-x-3 mt-9">
+            <p className="text-base leading-relaxed mt-2 text-gray-600 dark:text-gray-300">
+            <b>BidSwap360</b> – Where Every Trade Comes to Life!
+            </p>
+
+            <ul className="flex items-center space-x-3 mt-10">
               <li>
                 <a
                   href="#"
                   title=""
-                  className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600"
+                  className="flex items-center justify-center text-white transition-all duration-200 rounded-full w-7 h-7 bg-gray-800 hover:bg-cyan-300 dark:hover:bg-cyan-400"
                 >
                   <svg
                     className="w-4 h-4"
@@ -35,7 +38,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600"
+                  className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-cyan-400 focus:bg-cyan-400"
                 >
                   <svg
                     className="w-4 h-4"
@@ -100,7 +103,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   About{" "}
@@ -111,7 +114,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Features{" "}
@@ -122,7 +125,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Works{" "}
@@ -133,7 +136,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Career{" "}
@@ -152,7 +155,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Customer Support{" "}
@@ -163,7 +166,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Delivery Details{" "}
@@ -174,7 +177,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Terms & Conditions{" "}
@@ -185,7 +188,7 @@ const Footer = () => {
                 <a
                   href="#"
                   title=""
-                  className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                  className="flex text-base text-black transition-all duration-200 hover:text-cyan-500 focus:text-cyan-500 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500"
                 >
                   {" "}
                   Privacy Policy{" "}
@@ -209,13 +212,13 @@ const Footer = () => {
                   name="email"
                   id="email"
                   placeholder="Enter your email"
-                  className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                  className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white dark:bg-gray-800 dark:text-white border border-gray-200 rounded-md focus:outline-none focus:border-cyan-400 caret-cyan-400"
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700"
+                className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-cyan-400 rounded-md hover:bg-cyan-600 focus:bg-blue-700"
               >
                 Subscribe
               </button>
@@ -226,7 +229,7 @@ const Footer = () => {
         <hr className="mt-16 mb-10 border-gray-200" />
 
         <p className="text-sm text-center text-gray-600">
-          © Copyright 2021, All Rights Reserved by Postcraft
+          © Copyright 2024, All Rights Reserved by BidSwap360
         </p>
       </div>
     </section>

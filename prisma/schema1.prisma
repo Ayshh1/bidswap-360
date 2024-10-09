@@ -140,7 +140,7 @@ model Training {
   category    String
   description String
   slug        String
-  content     String
+  content     String?
   image       String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt

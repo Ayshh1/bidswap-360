@@ -35,18 +35,14 @@ export default function CategoryList({category}) {
   } 
   // console.log(updatedProducts,"updated category data")
   return (
-    <div className='bg-white border border-gray-300 rounded-lg
-    dark:bg-gray-700 dark:border-gray-700 text-slate-800 overflow-hidden'>
-         <div className="bg-slate-100 py-3 px-6 font-semibold border-b  border-gray-300
-         dark:bg-slate-800 text-slate-800 dark:text-slate-100 dark:border-gray-600 
-         flex justify-between items-center ">
-        < h2>  {category.name} </h2>
-        <Link href="/" className='bg-lime-600 text-slate-50
-         rounded-md px-4 py-2 hover:bg-lime-700 duration:300 transition-all'>See All
-         </Link>
-         
-        </div>
-        <div className="bg-white  dark:bg-slate-700 p-4">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 text-slate-800 overflow-hidden">
+    <div className="bg-gray-100 py-3 px-6 font-semibold border-b border-gray-300 dark:bg-gray-900 text-slate-800 dark:text-slate-100 dark:border-gray-700 flex justify-between items-center">
+        <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-100">{category.name}</h2>
+        {/* <Link href="/" className="bg-gray-600 dark:bg-gray-600 text-slate-50 rounded-md px-4 py-2 hover:bg-gray-800 dark:hover:bg-gray-800  transition-all duration-300">
+            See All
+        </Link> */}
+    </div>
+    <div className="bg-white dark:bg-gray-800 p-5 rounded-b-lg">
       {updatedProducts ?(
           <CategoryCarousel products={updatedProducts} /> 
 

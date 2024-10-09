@@ -20,7 +20,7 @@ export default function ThemeSwitcherBtn() {
     };
 
     return (
-        <button onClick={toggleTheme} className='text-lime-700 dark:text-lime-500'>
+        <button onClick={toggleTheme} className='text-cyan-500 dark:text-cyan-300'>
             {theme === 'light' ? <Moon /> : <Sun />}
         </button>
     );

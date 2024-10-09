@@ -23,12 +23,13 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import UserAvatar from "./UserAvatar";
 import { getServerSession } from "next-auth";
 import { useSession } from "next-auth/react";
+import Loading from "@/app/loading";
 
 
 export default function NavBar({setShow, showSidebar}) {
   const {data:session,status} = useSession();
   if (status==="loading"){
-    return <p>Loading...</p>
+    return <Loading/>
   }
   return (
     <div className={showSidebar?"z-50 flex items-center justify-between bg-slate-900 text-blue-200 h-16 px-6 py-8 fixed top-0 w-auto lg:left-60 sm:left-40   right-0":"flex z-50 items-center justify-between bg-slate-900 text-blue-200 h-16 px-6 py-8 fixed top-0 w-auto left-1 right-0 ml-[-10] "}>

@@ -77,7 +77,7 @@ export default function Page() {
             <div className="px-4 py-6 sm:px-8 sm:py-10">
               <div className="-my-8 divide-y divide-gray-200">
                 <div className="pt-16 pb-8 text-center sm:py-8">
-                  <CheckCircle2 className="w-10 h-10 mx-auto text-lime-500" />
+                  <CheckCircle2 className="w-10 h-10 mx-auto text-cyan-500" />
 
                   <h1 className="mt-4 text-2xl font-bold text-gray-900 dark:text-lime-50">
                     We received your order!
