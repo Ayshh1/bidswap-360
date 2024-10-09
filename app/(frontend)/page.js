@@ -100,7 +100,7 @@ export default async function Home({ searchParams }) {
   
       // Convert the category map to an array
       categories = Object.values(categoryMap);
-      console.log(categories, "search datas");
+      
     }
     else if(minprice || maxprice){
       
